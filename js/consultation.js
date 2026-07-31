@@ -1,5 +1,5 @@
 document
-.getElementById("consultationForm")
+.getElementById("consultationFormData")
 .addEventListener("submit", async function (e) {
 
 e.preventDefault();
@@ -11,7 +11,7 @@ button.innerText = "Submitting...";
 
 const data = {
 
-sheet: "Consultation",
+sheet: "Consultations",
 
 institution:
 document.getElementById("institution").value,
