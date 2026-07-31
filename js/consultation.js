@@ -70,7 +70,21 @@ behavior: "smooth"
 alert(result);
 
 }
+  const result = await response.text();
 
+        if (result === "Success") {
+
+            status.style.color = "green";
+            status.innerHTML =
+                "✅ Thank you! Your message has been submitted successfully.";
+
+            contactForm.reset();
+
+        } else {
+
+            throw new Error(result);
+
+        }
 } catch (err) {
 
 alert("Unable to submit the form.");
