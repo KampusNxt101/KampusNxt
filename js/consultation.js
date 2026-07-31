@@ -19,9 +19,6 @@ document.getElementById("institution").value,
 contactPerson:
 document.getElementById("contactPerson").value,
 
-designation:
-document.getElementById("designation").value,
-
 email:
 document.getElementById("email").value,
 
@@ -31,23 +28,14 @@ document.getElementById("phone").value,
 city:
 document.getElementById("city").value,
 
-students:
-document.getElementById("students").value,
+batch:
+document.getElementById("batch").value,
 
-department:
-document.getElementById("department").value,
+checkbox:
+document.getElementById("checkbox").value,
 
-challenge:
-document.getElementById("challenge").value,
-
-date:
-document.getElementById("date").value,
-
-time:
-document.getElementById("time").value,
-
-notes:
-document.getElementById("notes").value
+message:
+document.getElementById("message").value
 
 };
 
@@ -65,7 +53,7 @@ const result = await response.text();
 
 if (result.includes("Success")) {
 
-document.getElementById("consultationForm").reset();
+document.getElementById("consultationFormData").reset();
 
 document.getElementById("successMessage").style.display =
 "block";
