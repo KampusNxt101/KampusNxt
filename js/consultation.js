@@ -41,7 +41,7 @@ document.getElementById("message").value
 
 try {
 
-const response = await fetch(WEB_APP_URL, {
+const response = await fetch(APP_URL, {
 
 method: "POST",
 
