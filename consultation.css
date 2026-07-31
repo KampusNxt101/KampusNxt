@@ -1,0 +1,473 @@
+/* ======================================================
+   GLOBAL STYLES
+====================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#f8fafc;
+    color:#334155;
+    line-height:1.7;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+section{
+    padding:80px 0;
+}
+
+h1,h2,h3{
+    color:#0f172a;
+    margin-bottom:18px;
+}
+
+p{
+    color:#64748b;
+}
+
+a{
+    text-decoration:none;
+}
+
+/* ======================================================
+   HERO
+====================================================== */
+
+.consultation-hero{
+
+    background:linear-gradient(135deg,#2563eb,#1d4ed8);
+
+    color:#fff;
+
+    text-align:center;
+
+    padding:120px 20px;
+
+}
+
+.consultation-hero h1{
+
+    font-size:46px;
+
+    color:#fff;
+
+    margin-bottom:20px;
+
+}
+
+.consultation-hero p{
+
+    max-width:760px;
+
+    margin:auto;
+
+    font-size:18px;
+
+    color:#e2e8f0;
+
+}
+
+.hero-btn{
+
+    display:inline-block;
+
+    margin-top:40px;
+
+    background:#fff;
+
+    color:#2563eb;
+
+    padding:15px 34px;
+
+    border-radius:8px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.hero-btn:hover{
+
+    background:#f1f5f9;
+
+    transform:translateY(-3px);
+
+}
+
+/* ======================================================
+ BENEFITS
+====================================================== */
+
+.benefits{
+
+    background:#fff;
+
+}
+
+.benefits h2{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.benefit-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+.card{
+
+    background:#f8fafc;
+
+    border-radius:12px;
+
+    padding:35px;
+
+    transition:.3s;
+
+    border:1px solid #e2e8f0;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.card h3{
+
+    color:#2563eb;
+
+    margin-bottom:15px;
+
+}
+
+/* ======================================================
+ FORM
+====================================================== */
+
+.form-section{
+
+    background:#f1f5f9;
+
+}
+
+.form-box{
+
+    background:#fff;
+
+    padding:50px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 35px rgba(0,0,0,.08);
+
+}
+
+.form-box h2{
+
+    text-align:center;
+
+}
+
+.form-box p{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+}
+
+.row{
+
+    display:flex;
+
+    gap:25px;
+
+    margin-bottom:25px;
+
+}
+
+.field{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+label{
+
+    font-weight:600;
+
+    margin-bottom:8px;
+
+    color:#334155;
+
+}
+
+input,
+select,
+textarea{
+
+    width:100%;
+
+    padding:14px;
+
+    border:1px solid #cbd5e1;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+    transition:.3s;
+
+    background:#fff;
+
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+
+    outline:none;
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.15);
+
+}
+
+textarea{
+
+    resize:vertical;
+
+    margin-bottom:30px;
+
+}
+
+.checkbox-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:15px;
+
+    margin:20px 0 35px;
+
+}
+
+.checkbox-grid label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-weight:500;
+
+    background:#f8fafc;
+
+    padding:12px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    border:1px solid #e2e8f0;
+
+}
+
+.checkbox-grid input{
+
+    width:auto;
+
+}
+
+button{
+
+    width:100%;
+
+    background:#2563eb;
+
+    color:#fff;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+
+}
+
+/* ======================================================
+ CTA
+====================================================== */
+
+.bottom-cta{
+
+    background:#1e293b;
+
+    color:#fff;
+
+    text-align:center;
+
+}
+
+.bottom-cta h2{
+
+    color:#fff;
+
+    margin-bottom:20px;
+
+}
+
+.bottom-cta p{
+
+    color:#cbd5e1;
+
+    max-width:700px;
+
+    margin:0 auto 35px;
+
+}
+
+/* ======================================================
+ RESPONSIVE
+====================================================== */
+
+@media(max-width:992px){
+
+.row{
+
+    flex-direction:column;
+
+}
+
+.consultation-hero h1{
+
+    font-size:38px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+section{
+
+    padding:60px 0;
+
+}
+
+.consultation-hero{
+
+    padding:90px 20px;
+
+}
+
+.consultation-hero h1{
+
+    font-size:30px;
+
+}
+
+.consultation-hero p{
+
+    font-size:16px;
+
+}
+
+.form-box{
+
+    padding:30px;
+
+}
+
+.hero-btn{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+button{
+
+    font-size:16px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.container{
+
+    width:94%;
+
+}
+
+.form-box{
+
+    padding:25px;
+
+}
+
+.card{
+
+    padding:25px;
+
+}
+
+.checkbox-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+}
