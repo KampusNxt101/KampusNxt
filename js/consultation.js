@@ -48,8 +48,7 @@ const response = await fetch(APP_URL, {
 
 method: "POST",
 
-body: new URLSearchParams(data)
-
+body:JSON.stringify(data)
 });
 
 const result = await response.text();
