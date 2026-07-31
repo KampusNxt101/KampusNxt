@@ -1,0 +1,236 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f8fafc;
+color:#333;
+}
+
+/* Navbar */
+
+.navbar{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:white;
+box-shadow:0 3px 12px rgba(0,0,0,.08);
+
+}
+
+.logo{
+
+text-decoration:none;
+font-size:32px;
+font-weight:700;
+color:#111827;
+
+}
+
+.logo span{
+
+color:#2563eb;
+
+}
+
+.navbar ul{
+
+display:flex;
+list-style:none;
+gap:30px;
+
+}
+
+.navbar ul li a{
+
+text-decoration:none;
+font-weight:500;
+color:#333;
+
+}
+
+.navbar ul li a:hover{
+
+color:#2563eb;
+
+}
+
+/* Hero */
+
+.hero{
+
+background:linear-gradient(135deg,#2563eb,#1d4ed8);
+color:white;
+padding:90px 10%;
+text-align:center;
+
+}
+
+.hero h1{
+
+font-size:48px;
+margin-bottom:20px;
+
+}
+
+.hero p{
+
+max-width:700px;
+margin:auto;
+line-height:1.8;
+
+}
+
+/* Main */
+
+.download-section{
+
+padding:80px 8%;
+
+}
+
+.container{
+
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+
+}
+
+/* Left */
+
+.left{
+
+background:white;
+padding:40px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.left h2{
+
+margin-bottom:30px;
+color:#1e3a8a;
+
+}
+
+.left ul{
+
+list-style:none;
+
+}
+
+.left li{
+
+padding:15px;
+margin-bottom:15px;
+background:#eef4ff;
+border-radius:8px;
+
+}
+
+/* Right */
+
+.right{
+
+background:white;
+padding:40px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.right h2{
+
+margin-bottom:25px;
+color:#1e3a8a;
+
+}
+
+.right form{
+
+display:flex;
+flex-direction:column;
+
+}
+
+.right input,
+.right select{
+
+padding:15px;
+margin-bottom:18px;
+border:1px solid #ddd;
+border-radius:8px;
+font-size:15px;
+
+}
+
+.download-btn{
+
+display:block;
+background:#2563eb;
+color:white;
+text-align:center;
+padding:16px;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+
+}
+
+.download-btn:hover{
+
+background:#1d4ed8;
+
+}
+
+/* Footer */
+
+footer{
+
+margin-top:70px;
+background:#111827;
+color:white;
+text-align:center;
+padding:25px;
+
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.container{
+
+grid-template-columns:1fr;
+
+}
+
+.hero h1{
+
+font-size:36px;
+
+}
+
+.navbar{
+
+flex-direction:column;
+gap:20px;
+
+}
+
+.navbar ul{
+
+flex-wrap:wrap;
+justify-content:center;
+
+}
+
+}
