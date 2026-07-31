@@ -42,6 +42,56 @@ a{
     text-decoration:none;
 }
 
+/* NAVBAR */
+
+nav{
+background:#fff;
+border-bottom:1px solid #eee;
+position:sticky;
+top:0;
+z-index:999;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#0057D9;
+}
+
+.logo span{
+color:#0A2540;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav a{
+color:#475569;
+font-weight:500;
+}
+
+.active{
+color:#0057D9;
+}
+
+.btn{
+background:#0057D9;
+color:#fff;
+padding:14px 28px;
+border-radius:8px;
+font-weight:600;
+}
+
 /* ======================================================
    HERO
 ====================================================== */
@@ -402,6 +452,9 @@ section{
 
     padding:60px 0;
 
+}
+nav ul{
+display:none;
 }
 
 .consultation-hero{
