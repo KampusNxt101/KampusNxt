@@ -29,7 +29,7 @@ contactForm.addEventListener("submit", async function (e) {
 
         });
 
-        const result = await response.text();
+        const result = await response.json();
 
         if (result.trim() === "Success") {
 
