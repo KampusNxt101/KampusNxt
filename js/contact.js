@@ -1,5 +1,5 @@
 const WEB_APP_URL =
-"https://script.google.com/macros/s/AKfycbyMKmhbgtbiihSU1HI4jS_dFI4O3x00tGSV1-wf0OpDP6f8La_N8KUl8zNm8ZInBiA0/exec";
+"https://script.google.com/macros/s/AKfycbzkNJyxiTg6QN75C01VTQ0QHwiPhbC4LuptPoAcCX5ecUdmu1-wCOXrwkKzpLJLv_mI/exec";
 
 const contactForm = document.getElementById("contactForm");
 const status = document.getElementById("contactStatus");
