@@ -31,7 +31,7 @@ contactForm.addEventListener("submit", async function (e) {
 
         const result = await response.text();
 
-        if (result === "Success") {
+        if (result.trim() === "Success") {
 
             status.style.color = "green";
             status.innerHTML =
