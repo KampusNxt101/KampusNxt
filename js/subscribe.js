@@ -1,6 +1,5 @@
-# const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzkNJyxiTg6QN75C01VTQ0QHwiPhbC4LuptPoAcCX5ecUdmu1-wCOXrwkKzpLJLv_mI/exec"
-env:
-API_URL = secrets.GSheet_API_URL
+const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzkNJyxiTg6QN75C01VTQ0QHwiPhbC4LuptPoAcCX5ecUdmu1-wCOXrwkKzpLJLv_mI/exec"
+
 document
 .getElementById("subscribeForm")
 .addEventListener("submit", async function(e){
@@ -16,7 +15,7 @@ document
         formData.append("sheet","Subscribers");
         formData.append("email",email);
 
-        const response = await fetch($APP_URL,{
+        const response = await fetch(WEB_APP_URL,{
             method:"POST",
             body:formData
         });
