@@ -1,7 +1,7 @@
 const WEB_APP_URL =
 "https://script.google.com/macros/s/AKfycbzkNJyxiTg6QN75C01VTQ0QHwiPhbC4LuptPoAcCX5ecUdmu1-wCOXrwkKzpLJLv_mI/exec";
 
-const contactForm = document.getElementById("contactForm");
+const contactForm = document.getElementById("contactform");
 const status = document.getElementById("contactStatus");
 
 contactForm.addEventListener("submit", async function (e) {
@@ -13,11 +13,11 @@ contactForm.addEventListener("submit", async function (e) {
     const formData = new URLSearchParams();
 
     formData.append("sheet", "Contact");
-    formData.append("fullName", document.getElementById("fullName").value);
+    formData.append("fullName", document.getElementById("fullname").value);
     formData.append("email", document.getElementById("email").value);
     formData.append("phone", document.getElementById("phone").value);
     formData.append("organization", document.getElementById("organization").value);
-    formData.append("userType", document.getElementById("userType").value);
+    formData.append("userType", document.getElementById("usertype").value);
     formData.append("message", document.getElementById("message").value);
 
     try {
