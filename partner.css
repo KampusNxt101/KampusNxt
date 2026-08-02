@@ -60,6 +60,14 @@ body{
     color:#2563eb;
 
 }
+.btn-primary{
+
+    background:#0057D9;
+    color:#fff;
+    padding:14px 28px;
+    border-radius:8px;
+    font-weight:600;
+}
 
 /* Hero */
 
