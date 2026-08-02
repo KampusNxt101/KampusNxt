@@ -16,40 +16,24 @@
 
 <body>
 
+
     <nav class="navbar">
     <div class="container nav-wrapper">
         <a href="index.html" class="logo">
             Kampus<span>Nxt</span>
         </a>
-        
-        <!-- Hamburger -->
-        <div class="menu-toggle" id="menu-toggle">
-            ☰
-        </div>
-
-        <!-- Navigation -->
-        <ul class="nav-links" id="nav-links">>
+        <ul>
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="Programs.html">Programs</a></li>
             <li><a href="Programs.html">Colleges</a></li>
             <li><a href="Resources.html">Resources</a></li>
             <li><a href="contact.html">Contact</a></li>
-
-            <li class="mobile-btn">
-                <a href="Book-demo.html" class="btn-primary">
-                    Book Demo
-                </a>
-            </li>
-
         </ul>
 
-        <a href="Book-demo.html" class="btn-primary desktop-btn">
-            Book Demo
-        </a>
-
+        <a href="Book-demo.html" class="btn-primary">Book Demo</a>
     </div>
+    </nav>
 
-</nav>
 
 
 <!-- Hero -->
@@ -174,37 +158,6 @@
 <script src="js/config.js"></script>
 <script src="js/api.js"></script>
 <script src="js/partner.js"></script>
-
-<!-- JavaScript -->
-<script>
-
-const menuToggle = document.getElementById("menu-toggle");
-const navLinks = document.getElementById("nav-links");
-
-menuToggle.addEventListener("click", () => {
-
-    navLinks.classList.toggle("active");
-
-    if(navLinks.classList.contains("active")){
-        menuToggle.innerHTML = "✕";
-    } else {
-        menuToggle.innerHTML = "☰";
-    }
-
-});
-
-document.querySelectorAll("#nav-links a").forEach(link => {
-
-    link.addEventListener("click", () => {
-
-        navLinks.classList.remove("active");
-        menuToggle.innerHTML = "☰";
-
-    });
-
-});
-
-</script>
-
 </body>
+
 </html>
