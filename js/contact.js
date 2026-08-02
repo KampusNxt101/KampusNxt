@@ -46,11 +46,7 @@ contactForm.addEventListener("submit", async function (e) {
 
     } catch (err) {
 
-        status.style.color = "red";
-        status.innerHTML =
-            "❌ Unable to submit the form. Please try again.";
-
-        console.error(err);
+        alert("Unable to submit the form.");
 
     }
 
