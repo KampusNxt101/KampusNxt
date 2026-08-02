@@ -53,24 +53,20 @@ const response = await fetch(APP_URL, {
     method: "POST",
     body: formData
 });  
-  
 
-const result = await response.text();
+const result = await response.json();
 
-if (result.includes("Success")) {
+if (result.status === "success") {
+    document.getElementById("consultationFormData").reset();
 
-document.getElementById("consultationFormData").reset();
+    alert("Consultation request submitted successfully!");
 
-
-window.scrollTo({
-top: document.body.scrollHeight,
-behavior: "smooth"
-});
-
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth"
+    });
 } else {
-
-alert(result);
-
+    alert(result.message || "Submission failed.");
 }
 } catch (err) {
 
