@@ -30,13 +30,13 @@ contactForm.addEventListener("submit", async function (e) {
         });
 
         const result = await response.json();
-        if (result.status === "Success") {
-            document.getElementById(contactform").reset();
+        if (result.status === "success") {
+            document.getElementById("contactform").reset();
 
             alert("Message sent successfuly!");
-        });
+        }
 
-        } else {
+         else {
 
             alert(result.message || "Submission Failed");
 
