@@ -8,6 +8,14 @@ e.preventDefault();
 
 const button = document.getElementById("submitBtn");
 
+const challenges = [];
+document
+.querySelectorAll('input[name="challenge"]:checked')
+.forEach(cb => {
+    challenges.push(cb.value);
+});
+
+
 button.disabled = true;
 button.innerText = "Submitting...";
 
@@ -15,23 +23,23 @@ const data = {
 
 sheet: "Consultations",
 
-institution:document.getElementById("institution").value,
+institution: document.getElementById("institution").value,
 
-contactPerson:document.getElementById("contactPerson").value,
+contactPerson: document.getElementById("contactPerson").value,
 
-email:document.getElementById("email").value,
+email: document.getElementById("email").value,
 
-phone:document.getElementById("phone").value,
+phone: document.getElementById("phone").value,
 
-city:document.getElementById("city").value,
+city: document.getElementById("city").value,
 
-batch:document.getElementById("batch").value,
+batch: document.getElementById("batch").value,
 
-placementChallenges:document.getElementById("placementChallenges").value,
+placementChallenges: challenges.join(", "),
 
-message:document.getElementById("message").value,
+message: document.getElementById("message").value,
 
-mode:document.getElementBuId("mode").value
+mode: document.getElementById("mode").value
 };
 
 try {
@@ -39,6 +47,9 @@ try {
 const response = await fetch(APP_URL, {
 
 method: "POST",
+headers:{
+        "Content-Type":"application/json"
+    },
 
 body:JSON.stringify(data)
 });
@@ -49,8 +60,6 @@ if (result.includes("Success")) {
 
 document.getElementById("consultationFormData").reset();
 
-document.getElementById("successMessage").style.display =
-"block";
 
 window.scrollTo({
 top: document.body.scrollHeight,
@@ -62,21 +71,6 @@ behavior: "smooth"
 alert(result);
 
 }
-  const result = await response.text();
-
-        if (result === "Success") {
-
-            status.style.color = "green";
-            status.innerHTML =
-                "✅ Thank you! Your message has been submitted successfully.";
-
-            contactForm.reset();
-
-        } else {
-
-            throw new Error(result);
-
-        }
 } catch (err) {
 
 alert("Unable to submit the form.");
