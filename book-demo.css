@@ -37,8 +37,6 @@ body{
     align-items:center;
 }
 
-}
-
 .logo{
 
     font-size:28px;
@@ -260,20 +258,21 @@ font-size:34px;
 
 }
 
-.navbar{
+.nav-wrapper{
 
 flex-direction:column;
 
 gap:20px;
 
 }
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:20px;
+    }
 
-.navbar ul{
-
-flex-wrap:wrap;
-
-justify-content:center;
-
-}
-
+    .btn-primary{
+        width:100%;
+        text-align:center;
+    }
 }
