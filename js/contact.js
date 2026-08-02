@@ -31,16 +31,14 @@ contactForm.addEventListener("submit", async function (e) {
 
         const result = await response.json();
         if (result.status === "Success") {
+            document.getElementById(contactform").reset();
 
-            status.style.color = "green";
-            status.innerHTML =
-                "✅ Thank you! Your message has been submitted successfully.";
-
-            contactForm.reset();
+            alert("Message sent successfuly!");
+        });
 
         } else {
 
-            throw new Error(result.message || "Submission Failed");
+            alert(result.message || "Submission Failed");
 
         }
 
