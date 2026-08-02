@@ -46,7 +46,7 @@ contactForm.addEventListener("submit", async function (e) {
 
     } catch (err) {
 
-        alert("Unable to submit the form.");
+        alert("Unable to submit the form...");
 
     }
 
