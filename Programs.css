@@ -112,6 +112,14 @@ color:#0A2540;
     font-weight:600;
 }
 
+.btn-outline{
+    border:2px solid #0057D9;
+    color:#0057D9;
+    padding:12px 28px;
+    border-radius:8px;
+    margin-left:15px;
+    font-weight:600;
+}
 
 /* HERO */
 
