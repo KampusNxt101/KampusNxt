@@ -16,27 +16,43 @@
 <body>
 
 <!-- ===================== NAVBAR ====================== -->
+<nav class="navbar">
 
-<nav>
+    <div class="container nav-wrapper">
 
-<div class="container navbar">
+        <a href="index.html" class="logo">
+            Kampus<span>Nxt</span>
+        </a>
 
-<a href="index.html" class="logo">
-    Kampus<span>Nxt</span>
-</a>
+        <!-- Hamburger -->
+        <div class="menu-toggle" id="menu-toggle">
+            ☰
+        </div>
 
-<ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="programs.html" class="active">Programs</a></li>
-    <li><a href="Colleges.html">Colleges</a></li>
-    <li><a href="Resources.html">Resources</a></li>
-    <li><a href="Contact.html">Contact</a></li>
+        <!-- Navigation -->
 
-</ul>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Programs.html"class="active">Programs</a></li>
+            <li><a href="Colleges.html">Colleges</a></li>
+            <li><a href="Resources.html">Resources</a></li>
+            <li><a href="Contact.html">Contact</a></li>
 
-<a href="Book-demo.html" class="btn">Book Demo</a>
+            <li class="mobile-btn">
+                <a href="Book-demo.html" class="btn-primary">
+                    Book Demo
+                </a>
+            </li>
 
-</div>
+        </ul>
+
+        <!-- Desktop Button -->
+
+        <a href="Book-demo.html" class="btn-primary desktop-btn">
+            Book Demo
+        </a>
+
+    </div>
 
 </nav>
 
@@ -310,7 +326,6 @@ and measurable student outcomes.
 </section>
 
 
-
 <footer>
 
 <div class="container">
@@ -324,6 +339,37 @@ and measurable student outcomes.
 </div>
 
 </footer>
+
+<!-- JavaScript -->
+<script>
+
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+menuToggle.addEventListener("click", () => {
+
+    navLinks.classList.toggle("active");
+
+    if(navLinks.classList.contains("active")){
+        menuToggle.innerHTML = "✕";
+    } else {
+        menuToggle.innerHTML = "☰";
+    }
+
+});
+
+document.querySelectorAll("#nav-links a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navLinks.classList.remove("active");
+        menuToggle.innerHTML = "☰";
+
+    });
+
+});
+
+</script>
 
 </body>
 </html>
