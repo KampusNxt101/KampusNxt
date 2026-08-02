@@ -43,16 +43,17 @@ mode: document.getElementById("mode").value
 };
 
 try {
+const formData = new FormData();
+
+Object.keys(data).forEach(key => {
+    formData.append(key, data[key]);
+});
 
 const response = await fetch(APP_URL, {
-
-method: "POST",
-headers:{
-        "Content-Type":"application/json"
-    },
-
-body:JSON.stringify(data)
-});
+    method: "POST",
+    body: formData
+});  
+  
 
 const result = await response.text();
 
