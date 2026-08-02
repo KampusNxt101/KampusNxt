@@ -31,7 +31,7 @@ contactForm.addEventListener("submit", async function (e) {
 
         const result = await response.json();
 
-        if (result.trim() === "Success") {
+        if (result === "Success") {
 
             status.style.color = "green";
             status.innerHTML =
@@ -41,7 +41,7 @@ contactForm.addEventListener("submit", async function (e) {
 
         } else {
 
-            throw new Error(result);
+            throw new Error(result.message || "Submission Failed");
 
         }
 
