@@ -31,7 +31,7 @@ contactForm.addEventListener("submit", async function (e) {
 
         const result = await response.json();
 
-        if (result === "Success") {
+        if (result.status === "Success") {
 
             status.style.color = "green";
             status.innerHTML =
