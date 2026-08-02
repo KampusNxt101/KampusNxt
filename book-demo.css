@@ -8,9 +8,12 @@
 body{
     background:#f8fafc;
     color:#333;
+    background:#fff;
+    line-height:1.7;
 }
 
 .container{
+
     width:90%;
     max-width:1200px;
     margin:auto;
@@ -48,31 +51,20 @@ body{
     color:#0A2540;
 }
 
-.navbar ul{
+.nav-links{
 
     display:flex;
-
     list-style:none;
-
-    gap:30px;
-
+    gap:35px;
 }
 
-.navbar ul li a{
-
-    text-decoration:none;
+.nav-links a{
 
     color:#333;
-
     font-weight:500;
-
 }
 
-.navbar ul li a:hover{
 
-    color:#2563eb;
-
-}
 .btn-primary{
 
     background:#0057D9;
