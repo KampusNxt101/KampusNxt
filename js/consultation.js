@@ -1,5 +1,4 @@
-API_URL =
-"https://script.google.com/macros/s/AKfycbzkNJyxiTg6QN75C01VTQ0QHwiPhbC4LuptPoAcCX5ecUdmu1-wCOXrwkKzpLJLv_mI/exec";
+APP_URL = "https://script.google.com/macros/s/AKfycbzkNJyxiTg6QN75C01VTQ0QHwiPhbC4LuptPoAcCX5ecUdmu1-wCOXrwkKzpLJLv_mI/exec";
   
 document
 .getElementById("consultationFormData")
@@ -16,30 +15,23 @@ const data = {
 
 sheet: "Consultations",
 
-institution:
-document.getElementById("institution").value,
+institution:document.getElementById("institution").value,
 
-contactPerson:
-document.getElementById("contactPerson").value,
+contactPerson:document.getElementById("contactPerson").value,
 
-email:
-document.getElementById("email").value,
+email:document.getElementById("email").value,
 
-phone:
-document.getElementById("phone").value,
+phone:document.getElementById("phone").value,
 
-city:
-document.getElementById("city").value,
+city:document.getElementById("city").value,
 
-batch:
-document.getElementById("batch").value,
+batch:document.getElementById("batch").value,
 
-checkbox:
-document.getElementById("checkbox").value,
+placementChallenges:document.getElementById("placementChallenges").value,
 
-message:
-document.getElementById("message").value
+message:document.getElementById("message").value,
 
+mode:document.getElementBuId("mode").value
 };
 
 try {
