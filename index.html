@@ -311,9 +311,20 @@ Book a Consultation
 
 </div>
 
+<footer>
+
+<div class="container">
+
+<p>
+© 2026 KampusNxt | Career Readiness Program
+</p>
+
+</div>
+
 </footer>
 
-    <script>
+<!-- JavaScript -->
+<script>
 
 const menuToggle = document.getElementById("menu-toggle");
 const navLinks = document.getElementById("nav-links");
@@ -324,9 +335,20 @@ menuToggle.addEventListener("click", () => {
 
     if(navLinks.classList.contains("active")){
         menuToggle.innerHTML = "✕";
-    }else{
+    } else {
         menuToggle.innerHTML = "☰";
     }
+
+});
+
+document.querySelectorAll("#nav-links a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navLinks.classList.remove("active");
+        menuToggle.innerHTML = "☰";
+
+    });
 
 });
 
