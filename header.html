@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Career Readiness Program</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="header.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+
+    <div class="container nav-wrapper">
+
+        <a href="index.html" class="logotext">
+            Kampus<span>Nxt</span>
+        </a>
+
+	<a href="index.html" class="logo">
+    <img src="logo.png" alt="KampusNxt Logo">
+	</a>
+
+        <!-- Hamburger -->
+        <div class="menu-toggle" id="menu-toggle">
+            ☰
+        </div>
+
+        <!-- Navigation -->
+
+        <ul class="nav-links" id="nav-links">
+  		<li><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
+		<li><a href="#"><i class="fa-solid fa-graduation-cap"></i> Programs</a></li>
+		<li><a href="#"><i class="fa-solid fa-building-columns"></i> Colleges</a></li>
+		<li><a href="#"><i class="fa-solid fa-book-open"></i> Resources</a></li>
+		<li><a href="#"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+
+            <li class="mobile-btn">
+                <a href="Book-demo.html" class="btn-primary">
+                    Book Demo
+                </a>
+            </li>
+
+        </ul>
+
+        <!-- Desktop Button -->
+
+        <a href="Book-demo.html" class="btn-primary desktop-btn">
+            Book Demo
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="container">
+
+<p>
+© 2026 KampusNxt | Career Readiness Program
+</p>
+
+</div>
+
+</footer>
+
+<!-- JavaScript -->
+<script>
+
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+menuToggle.addEventListener("click", () => {
+
+    navLinks.classList.toggle("active");
+
+    if(navLinks.classList.contains("active")){
+        menuToggle.innerHTML = "✕";
+    } else {
+        menuToggle.innerHTML = "☰";
+    }
+
+});
+
+document.querySelectorAll("#nav-links a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navLinks.classList.remove("active");
+        menuToggle.innerHTML = "☰";
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
