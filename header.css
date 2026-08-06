@@ -78,7 +78,7 @@ a{
 .logo {
     display: flex;
     align-items: center;
-    gap: 8px; 
+    gap: 4px; 
     font-size:28px;
     font-weight:700;
     color:#0057D9;
@@ -96,6 +96,7 @@ a{
     color: #0A2540;
     font-family: 'Poppins', sans-serif;
     letter-spacing: -0.5px;
+    margin-left: 0;
 }
 .logo img:hover{
     transform:scale(1.08) rotate(-4deg);
