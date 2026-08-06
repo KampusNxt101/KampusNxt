@@ -78,7 +78,10 @@ a{
 .logo {
     display: flex;
     align-items: center;
-    gap: 8px;          /* Reduce or increase spacing between logo and text */
+    gap: 8px; 
+    font-size:28px;
+    font-weight:700;
+    color:#0057D9;
     text-decoration: none;
 }
 
@@ -90,17 +93,10 @@ a{
 .logo span {
     font-size: 36px;   /* Increase font size */
     font-weight: 700;
-    color: #111827;
+    color: #0A2540;
     font-family: 'Poppins', sans-serif;
     letter-spacing: -0.5px;
 }
-
-.logo span{
-
-    color:#0A2540;
-}
-
-
 .logo img:hover{
     transform:scale(1.08) rotate(-4deg);
 }
