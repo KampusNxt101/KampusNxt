@@ -75,32 +75,31 @@ a{
     align-items:center;
 }
 
-.logo{
-
-    font-size:28px;
-    font-weight:700;
-    color:#0057D9;
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;          /* Reduce or increase spacing between logo and text */
+    text-decoration: none;
 }
 
 .logo img {
-    height: 55px;      /* Adjust as needed */
-    width: auto;
-    display: block;
-    transition: transform 0.3s ease;
+    width: 55px;       /* Adjust logo size */
+    height: auto;
 }
 
-.logo img:hover {
-    transform: scale(1.05);
+.logo span {
+    font-size: 36px;   /* Increase font size */
+    font-weight: 700;
+    color: #111827;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: -0.5px;
 }
 
 .logo span{
 
     color:#0A2540;
 }
-.logo img{
-    height:60px;
-    transition:.4s;
-}
+
 
 .logo img:hover{
     transform:scale(1.08) rotate(-4deg);
