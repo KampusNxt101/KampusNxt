@@ -351,6 +351,7 @@ nav a:hover::after{
 .demo-btn:hover{
     transform:translateY(-4px);
     box-shadow:0 20px 40px rgba(0,87,217,.35);
+    color: #fff;
 }
 nav a{
     overflow:hidden;
