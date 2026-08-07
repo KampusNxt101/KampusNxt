@@ -75,28 +75,37 @@ a{
     align-items:center;
 }
 
-.logo {
+.logo-span {
+    display: inline-flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -1.5px;
+}
+
+.logo-logo {
     display: flex;
     align-items: center;
-    gap: 4px; 
-    font-size:28px;
-    font-weight:700;
-    color:#0057D9;
+    gap: 8px;
     text-decoration: none;
+    white-space: nowrap;
 }
 
+/* Logo image */
 .logo img {
-    width: 55px;       /* Adjust logo size */
-    height: auto;
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
 }
 
-.logo span {
-    font-size: 36px;   /* Increase font size */
-    font-weight: 700;
-    color: #0A2540;
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: -0.5px;
-    margin-left: 0;
+.logo-span .kampus {
+    color: #5A2DDB;
+}
+.logo-span .nxt {
+    color: #FDB827;
 }
 .logo img:hover{
     transform:scale(1.08) rotate(-4deg);
