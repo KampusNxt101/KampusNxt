@@ -68,18 +68,6 @@ a{
     align-items:center;
 }
 
-.logo{
-
-    font-size:28px;
-    font-weight:700;
-    color:#0057D9;
-}
-
-.logo span{
-
-    color:#0A2540;
-}
-
 .nav-links{
 
     display:flex;
