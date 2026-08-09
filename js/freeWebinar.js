@@ -1,17 +1,27 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     const form = document.querySelector("form");
+    const submitButton = document.querySelector(".submit-btn");
+
+    // Google Apps Script Web App URL
+    const APP_URL = "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL";
+
 
     if (!form) {
         console.error("Webinar registration form not found.");
         return;
     }
 
-    form.addEventListener("submit", function (event) {
+
+    form.addEventListener("submit", async function (event) {
 
         event.preventDefault();
 
-        // Collect all form values
+
+        // ==========================================
+        // COLLECT FORM VALUES
+        // ==========================================
+
         const formData = {
             name: document.getElementById("name").value.trim(),
             email: document.getElementById("email").value.trim(),
@@ -22,11 +32,11 @@ document.addEventListener("DOMContentLoaded", function () {
             message: document.getElementById("message").value.trim()
         };
 
-        // Display collected data in browser console
-        console.log("Webinar Request:");
-        console.log(formData);
 
-        // Basic validation
+        // ==========================================
+        // REQUIRED FIELD VALIDATION
+        // ==========================================
+
         if (
             !formData.name ||
             !formData.email ||
@@ -34,18 +44,102 @@ document.addEventListener("DOMContentLoaded", function () {
             !formData.college ||
             !formData.designation
         ) {
+
             alert("Please fill in all required fields.");
+
             return;
         }
 
-        // Success message for now
-        alert(
-            "Thank you for requesting a webinar. " +
-            "Our team will contact you shortly."
-        );
 
-        // Reset form
-        form.reset();
+        // ==========================================
+        // EMAIL VALIDATION
+        // ==========================================
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailPattern.test(formData.email)) {
+
+            alert("Please enter a valid email address.");
+
+            return;
+        }
+
+
+        // ==========================================
+        // PHONE VALIDATION
+        // ==========================================
+
+        const phonePattern = /^[0-9]{10}$/;
+
+        if (!phonePattern.test(formData.phone)) {
+
+            alert("Please enter a valid 10-digit mobile number.");
+
+            return;
+        }
+
+
+        // ==========================================
+        // DISABLE BUTTON
+        // ==========================================
+
+        submitButton.disabled = true;
+
+        submitButton.innerText = "Submitting...";
+
+
+        // ==========================================
+        // SEND DATA TO GOOGLE APPS SCRIPT
+        // ==========================================
+
+        try {
+
+            await fetch(APP_URL, {
+
+                method: "POST",
+
+                mode: "no-cors",
+
+                headers: {
+                    "Content-Type": "application/json"
+                },
+
+                body: JSON.stringify(formData)
+
+            });
+
+
+            // ==========================================
+            // SUCCESS MESSAGE
+            // ==========================================
+
+            alert(
+                "Thank you for requesting a webinar!\n\n" +
+                "Our team will review your request and contact you shortly."
+            );
+
+
+            // Clear form
+            form.reset();
+
+
+        } catch (error) {
+
+            console.error("Submission Error:", error);
+
+            alert(
+                "Something went wrong while submitting your request. " +
+                "Please try again later."
+            );
+
+        } finally {
+
+            // Enable button
+            submitButton.disabled = false;
+
+            submitButton.innerText = "Request Free Webinar";
+
+        }
 
     });
 
