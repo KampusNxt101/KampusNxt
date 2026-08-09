@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    const form = document.querySelector("form");
+    const form = document.querySelector("freewebinarform");
     const submitButton = document.querySelector(".submit-btn");
 
     // Google Apps Script Web App URL
