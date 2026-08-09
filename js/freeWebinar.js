@@ -1,15 +1,31 @@
+```javascript
 document.addEventListener("DOMContentLoaded", function () {
 
-    const form = document.querySelector("freewebinarform");
+    // ==========================================
+    // GET FORM ELEMENTS
+    // ==========================================
+
+    const form = document.querySelector("#freewebinarform");
     const submitButton = document.querySelector(".submit-btn");
 
     // Google Apps Script Web App URL
-    const APP_URL = "https://script.google.com/macros/s/AKfycbwcoHK2085YgRtykgKqhCs0QDh_ZNDNAwUlN6z5W0m4FN-OnXaE7itj3hhcytXx1wyw/exec";
+    const APP_URL =
+        "https://script.google.com/macros/s/AKfycbwcoHK2085YgRtykgKqhCs0QDh_ZNDNAwUlN6z5W0m4FN-OnXaE7itj3hhcytXx1wyw/exec";
+
+
+    // ==========================================
+    // CHECK FORM
+    // ==========================================
+
     if (!form) {
         console.error("Webinar registration form not found.");
         return;
     }
 
+
+    // ==========================================
+    // FORM SUBMISSION
+    // ==========================================
 
     form.addEventListener("submit", async function (event) {
 
@@ -44,7 +60,6 @@ document.addEventListener("DOMContentLoaded", function () {
         ) {
 
             alert("Please fill in all required fields.");
-
             return;
         }
 
@@ -58,7 +73,6 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!emailPattern.test(formData.email)) {
 
             alert("Please enter a valid email address.");
-
             return;
         }
 
@@ -72,7 +86,6 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!phonePattern.test(formData.phone)) {
 
             alert("Please enter a valid 10-digit mobile number.");
-
             return;
         }
 
@@ -82,12 +95,26 @@ document.addEventListener("DOMContentLoaded", function () {
         // ==========================================
 
         submitButton.disabled = true;
-
         submitButton.innerText = "Submitting...";
 
 
         // ==========================================
-        // SEND DATA TO GOOGLE APPS SCRIPT
+        // CREATE FORM DATA
+        // ==========================================
+
+        const data = new URLSearchParams();
+
+        data.append("name", formData.name);
+        data.append("email", formData.email);
+        data.append("phone", formData.phone);
+        data.append("college", formData.college);
+        data.append("designation", formData.designation);
+        data.append("students", formData.students);
+        data.append("message", formData.message);
+
+
+        // ==========================================
+        // SEND TO GOOGLE APPS SCRIPT
         // ==========================================
 
         try {
@@ -98,11 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 mode: "no-cors",
 
-                headers: {
-                    "Content-Type": "application/json"
-                },
-
-                body: JSON.stringify(formData)
+                body: data
 
             });
 
@@ -132,9 +155,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         } finally {
 
-            // Enable button
-            submitButton.disabled = false;
+            // ==========================================
+            // ENABLE BUTTON
+            // ==========================================
 
+            submitButton.disabled = false;
             submitButton.innerText = "Request Free Webinar";
 
         }
@@ -142,3 +167,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+```
