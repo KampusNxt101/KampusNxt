@@ -299,3 +299,72 @@ footer{
     }
 
 }
+/* Free Webinar Notification Ticker */
+.webinar-ticker {
+    width: 100%;
+    height: 55px;
+    background: #0057D9;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 30px;
+    box-sizing: border-box;
+
+    font-family: 'Poppins', sans-serif;
+    gap: 20px;
+}
+
+.webinar-message {
+    font-size: 15px;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.webinar-message strong {
+    font-weight: 700;
+}
+
+.webinar-btn {
+    background: white;
+    color: #0057D9;
+
+    padding: 10px 20px;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition: all 0.3s ease;
+}
+
+.webinar-btn:hover {
+    background: #EAF2FF;
+    transform: translateY(-2px);
+}
+@media (max-width: 768px) {
+
+    .webinar-ticker {
+        height: 60px;
+        padding: 0 12px;
+        gap: 10px;
+    }
+
+    .webinar-message {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .webinar-btn {
+        padding: 8px 12px;
+        font-size: 11px;
+        border-radius: 6px;
+    }
+}
