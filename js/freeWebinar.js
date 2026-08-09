@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const submitButton = document.querySelector(".submit-btn");
 
     // Google Apps Script Web App URL
-    const APP_URL = "https://script.google.com/macros/s/AKfycbxxApxlk_9pQ52_gYFWZeBKYGmcOcDh-pMzU5uP_uNqfPst4EJWojdL_couIDBOt19o/exec";
+    const APP_URL = "https://script.google.com/macros/s/AKfycbwcoHK2085YgRtykgKqhCs0QDh_ZNDNAwUlN6z5W0m4FN-OnXaE7itj3hhcytXx1wyw/exec";
     if (!form) {
         console.error("Webinar registration form not found.");
         return;
