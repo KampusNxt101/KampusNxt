@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Request a Free Webinar | Career Readiness Program</title>
+
+    <meta name="description"
+          content="Request a free Campus Placement Readiness Webinar for your college. Our team will connect with your Training and Placement Cell to schedule the session.">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f6f9fc;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           MAIN CONTAINER
+        ========================== */
+
+        .webinar-section {
+            padding: 70px 20px;
+        }
+
+        .webinar-container {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+
+        /* =========================
+           LEFT CONTENT
+        ========================== */
+
+        .webinar-content {
+            padding-top: 20px;
+        }
+
+        .webinar-badge {
+            display: inline-block;
+            background: #e8f1ff;
+            color: #0057d9;
+            padding: 7px 15px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+
+        .webinar-content h1 {
+            font-size: 42px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #111827;
+        }
+
+        .webinar-content h1 span {
+            color: #0057d9;
+        }
+
+        .webinar-content p {
+            font-size: 17px;
+            color: #5b6472;
+            margin-bottom: 25px;
+        }
+
+
+        /* =========================
+           BENEFITS
+        ========================== */
+
+        .benefits-title {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #111827;
+        }
+
+        .benefits {
+            list-style: none;
+        }
+
+        .benefits li {
+            margin-bottom: 12px;
+            font-size: 16px;
+            color: #374151;
+        }
+
+        .benefits li::before {
+            content: "✓";
+            color: #0057d9;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+
+        /* =========================
+           FORM CARD
+        ========================== */
+
+        .form-card {
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e5e7eb;
+        }
+
+        .form-card h2 {
+            font-size: 25px;
+            margin-bottom: 8px;
+            color: #111827;
+        }
+
+        .form-card .form-intro {
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 25px;
+        }
+
+
+        /* =========================
+           FORM FIELDS
+        ========================== */
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 7px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 13px 14px;
+            border: 1px solid #d1d5db;
+            border-radius: 9px;
+            font-size: 15px;
+            font-family: inherit;
+            outline: none;
+            transition: 0.25s;
+            background: #ffffff;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #0057d9;
+            box-shadow: 0 0 0 3px rgba(0, 87, 217, 0.10);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+
+        /* =========================
+           TWO COLUMN FIELDS
+        ========================== */
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+
+        /* =========================
+           SUBMIT BUTTON
+        ========================== */
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #0057d9, #4f83ff);
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 8px 20px rgba(0, 87, 217, 0.20);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 25px rgba(0, 87, 217, 0.28);
+        }
+
+
+        /* =========================
+           PRIVACY NOTE
+        ========================== */
+
+        .privacy-note {
+            text-align: center;
+            font-size: 12px;
+            color: #6b7280;
+            margin-top: 15px;
+        }
+
+
+        /* =========================
+           MOBILE RESPONSIVE
+        ========================== */
+
+        @media (max-width: 800px) {
+
+            .webinar-section {
+                padding: 45px 15px;
+            }
+
+            .webinar-container {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .webinar-content {
+                padding-top: 0;
+            }
+
+            .webinar-content h1 {
+                font-size: 32px;
+            }
+
+            .webinar-content p {
+                font-size: 16px;
+            }
+
+            .form-card {
+                padding: 25px 20px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <!-- ======================================
+         YOUR EXISTING HEADER
+    ======================================= -->
+
+    <!-- Include your existing header here -->
+
+
+    <!-- ======================================
+         WEBINAR SECTION
+    ======================================= -->
+
+    <section class="webinar-section">
+
+        <div class="webinar-container">
+
+
+            <!-- LEFT SIDE -->
+
+            <div class="webinar-content">
+
+                <span class="webinar-badge">
+                    FREE COLLEGE WEBINAR
+                </span>
+
+                <h1>
+                    Request a Free
+                    <span>Placement Readiness Webinar</span>
+                    for Your College
+                </h1>
+
+                <p>
+                    Help students understand what it takes to prepare
+                    for campus placements before the actual company
+                    interview process begins.
+                </p>
+
+                <h3 class="benefits-title">
+                    What Students Will Learn
+                </h3>
+
+                <ul class="benefits">
+
+                    <li>
+                        Resume preparation and review
+                    </li>
+
+                    <li>
+                        LinkedIn profile optimization
+                    </li>
+
+                    <li>
+                        GitHub and portfolio readiness
+                    </li>
+
+                    <li>
+                        Project presentation and discussion
+                    </li>
+
+                    <li>
+                        Aptitude and coding preparation
+                    </li>
+
+                    <li>
+                        Technical interview preparation
+                    </li>
+
+                    <li>
+                        HR interview and communication tips
+                    </li>
+
+                    <li>
+                        Pre-interview placement checklist
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- RIGHT SIDE - FORM -->
+
+            <div class="form-card">
+
+                <h2>
+                    Request a Webinar
+                </h2>
+
+                <p class="form-intro">
+                    Fill in the details below. Our team will
+                    contact your Training & Placement Cell to
+                    discuss the webinar.
+                </p>
+
+
+                <!--
+                    IMPORTANT:
+                    Replace the form action with your actual
+                    form-processing URL.
+                -->
+
+                <form
+                    action="#"
+                    method="POST">
+
+
+                    <!-- CONTACT PERSON -->
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Name *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Your full name"
+                            required>
+
+                    </div>
+
+
+                    <!-- EMAIL + PHONE -->
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Official Email *
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="name@college.edu"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="phone">
+                                Contact Number *
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="10-digit mobile number"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- COLLEGE -->
+
+                    <div class="form-group">
+
+                        <label for="college">
+                            College / Institution Name *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="college"
+                            name="college"
+                            placeholder="Enter college name"
+                            required>
+
+                    </div>
+
+
+                    <!-- DESIGNATION -->
+
+                    <div class="form-group">
+
+                        <label for="designation">
+                            Designation / Role *
+                        </label>
+
+                        <select
+                            id="designation"
+                            name="designation"
+                            required>
+
+                            <option value="">
+                                Select your role
+                            </option>
+
+                            <option value="tpo">
+                                Training & Placement Officer
+                            </option>
+
+                            <option value="placement-head">
+                                Head - Placement Cell
+                            </option>
+
+                            <option value="hod">
+                                HOD / Department Head
+                            </option>
+
+                            <option value="faculty">
+                                Faculty / Professor
+                            </option>
+
+                            <option value="management">
+                                College Management
+                            </option>
+
+                            <option value="other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- STUDENT COUNT -->
+
+                    <div class="form-group">
+
+                        <label for="students">
+                            Approximate Number of Students
+                        </label>
+
+                        <select
+                            id="students"
+                            name="students">
+
+                            <option value="">
+                                Select student count
+                            </option>
+
+                            <option value="under-100">
+                                Less than 100
+                            </option>
+
+                            <option value="100-250">
+                                100 – 250
+                            </option>
+
+                            <option value="250-500">
+                                250 – 500
+                            </option>
+
+                            <option value="500-1000">
+                                500 – 1,000
+                            </option>
+
+                            <option value="1000-plus">
+                                More than 1,000
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- MESSAGE -->
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            Anything You Would Like Us to Know?
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            placeholder="Tell us about your students, placement challenges, preferred topics, etc."></textarea>
+
+                    </div>
+
+
+                    <!-- SUBMIT -->
+
+                    <button
+                        type="submit"
+                        class="submit-btn">
+
+                        Request Free Webinar
+
+                    </button>
+
+
+                    <p class="privacy-note">
+                        Our team will contact you to discuss
+                        the webinar and scheduling.
+                    </p>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ======================================
+         YOUR EXISTING FOOTER
+    ======================================= -->
+
+    <!-- Include your existing footer here -->
+
+
+</body>
+</html>
