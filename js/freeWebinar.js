@@ -121,9 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
             await fetch(APP_URL, {
 
                 method: "POST",
-
                 mode: "no-cors",
-
                 body: data
 
             });
