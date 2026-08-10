@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Google Apps Script Web App URL
     const APP_URL =
-        "https://script.google.com/macros/s/AKfycbwcoHK2085YgRtykgKqhCs0QDh_ZNDNAwUlN6z5W0m4FN-OnXaE7itj3hhcytXx1wyw/exec";
+        "https://script.google.com/macros/s/AKfycbz6LVV3lQcExgm1U2Y9Iel15ykID9cOk3cOoOoTQeWeXqMACcIZBHiltoD4nt21b-Vv/exec";
 
 
     // ==========================================
