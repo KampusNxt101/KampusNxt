@@ -354,6 +354,12 @@ nav a:hover::after{
     box-shadow: 0 10px 25px rgba(0,87,217,.25);
 }
 
+/* -- Recent Add -- */
+.demo-btn:active {
+    color: #fff !important;
+    background: linear-gradient(135deg, #0057D9, #4F83FF);
+}
+
 }
 nav a{
     overflow:hidden;
