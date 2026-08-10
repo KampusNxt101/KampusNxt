@@ -102,7 +102,8 @@ document.addEventListener("DOMContentLoaded", function () {
         // ==========================================
 
         const data = new URLSearchParams();
-
+        data.append("sheet", "Free_Webinar");
+        
         data.append("name", formData.name);
         data.append("email", formData.email);
         data.append("phone", formData.phone);
