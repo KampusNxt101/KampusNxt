@@ -135,12 +135,27 @@ a{
 }
 
 .btn-primary{
-
-    background:#0057D9;
-    color:#fff;
+    display:inline-block;
+    background:linear-gradient(135deg,#FDB827,#FFD45A);
+    color:#1e293b;
     padding:14px 28px;
     border-radius:8px;
-    font-weight:600;
+    font-weight:700;
+    transition:.35s ease;
+    box-shadow:0 8px 20px rgba(253,184,39,.25);
+}
+
+.btn-primary:hover{
+    background:linear-gradient(135deg,#F5A900,#FDB827);
+    color:#1e293b;
+    transform:translateY(-2px);
+    box-shadow:0 12px 25px rgba(253,184,39,.35);
+}
+
+.btn-primary:active{
+    background:#F5A900;
+    color:#1e293b;
+    transform:translateY(0);
 }
 
 .hero{
