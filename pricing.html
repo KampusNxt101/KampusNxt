@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Program Requirement Form</title>
+
+    <link rel="stylesheet" href="pricing.css">
+</head>
+
+<body>
+
+<div class="page-container">
+
+    <!-- HEADER -->
+    <header class="page-header">
+        <div>
+            <div class="brand">Career Readiness Program</div>
+
+            <h1>Program Requirement Form</h1>
+
+            <p>
+                Select the appropriate program and provide the student
+                information required to prepare the proposal.
+            </p>
+        </div>
+
+    </header>
+
+
+    <!-- FORM -->
+    <form id="requirementForm">
+
+        <!-- SECTION 1 -->
+        <section class="form-section">
+
+            <div class="section-heading">
+                <span class="section-number">01</span>
+
+                <div>
+                    <h2>College Information</h2>
+                    <p>Basic information about the institution.</p>
+                </div>
+            </div>
+
+
+            <div class="form-grid">
+
+                <div class="form-group full-width">
+                    <label for="collegeName">
+                        College / Institution Name
+                        <span>*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        id="collegeName"
+                        placeholder="e.g. ABC Engineering College"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="contactPerson">
+                        Contact Person
+                        <span>*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        id="contactPerson"
+                        placeholder="TPO / Principal / HOD"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="designation">
+                        Designation
+                    </label>
+
+                    <input
+                        type="text"
+                        id="designation"
+                        placeholder="Training & Placement Officer"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                        <span>*</span>
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="name@college.edu"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Contact Number
+                        <span>*</span>
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="+91 XXXXX XXXXX"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SECTION 2 -->
+        <section class="form-section">
+
+            <div class="section-heading">
+
+                <span class="section-number">02</span>
+
+                <div>
+                    <h2>Select Program</h2>
+
+                    <p>
+                        Select the program option the institution
+                        is interested in.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="program-grid">
+
+                <!-- OPTION 1 -->
+                <label class="program-card">
+
+                    <input
+                        type="radio"
+                        name="program"
+                        value="Individual"
+                        required
+                    >
+
+                    <div class="program-content">
+
+                        <div class="program-top">
+                            <span class="program-icon">01</span>
+
+                            <span class="radio-circle"></span>
+                        </div>
+
+                        <h3>Individual</h3>
+
+                        <p>
+                            Suitable for individual student
+                            participation.
+                        </p>
+
+                    </div>
+
+                </label>
+
+
+                <!-- OPTION 2 -->
+                <label class="program-card">
+
+                    <input
+                        type="radio"
+                        name="program"
+                        value="Campus Lite"
+                    >
+
+                    <div class="program-content">
+
+                        <div class="program-top">
+                            <span class="program-icon">02</span>
+
+                            <span class="radio-circle"></span>
+                        </div>
+
+                        <h3>Campus Lite</h3>
+
+                        <p>
+                            Focused intervention for a selected
+                            group of students.
+                        </p>
+
+                    </div>
+
+                </label>
+
+
+                <!-- OPTION 3 -->
+                <label class="program-card">
+
+                    <input
+                        type="radio"
+                        name="program"
+                        value="Campus Pro"
+                    >
+
+                    <div class="program-content">
+
+                        <div class="program-top">
+                            <span class="program-icon">03</span>
+
+                            <span class="radio-circle"></span>
+                        </div>
+
+                        <h3>Campus Pro</h3>
+
+                        <p>
+                            Comprehensive career readiness
+                            intervention for students.
+                        </p>
+
+                    </div>
+
+                </label>
+
+
+                <!-- OPTION 4 -->
+                <label class="program-card">
+
+                    <input
+                        type="radio"
+                        name="program"
+                        value="Enterprise"
+                    >
+
+                    <div class="program-content">
+
+                        <div class="program-top">
+                            <span class="program-icon">04</span>
+
+                            <span class="radio-circle"></span>
+                        </div>
+
+                        <h3>Enterprise</h3>
+
+                        <p>
+                            Customized institutional-level
+                            engagement.
+                        </p>
+
+                    </div>
+
+                </label>
+
+            </div>
+
+        </section>
+
+
+        <!-- SECTION 3 -->
+        <section class="form-section">
+
+            <div class="section-heading">
+
+                <span class="section-number">03</span>
+
+                <div>
+                    <h2>Student Information</h2>
+
+                    <p>
+                        Provide the expected student participation
+                        details.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label for="totalStudents">
+                        Total Students
+                        <span>*</span>
+                    </label>
+
+                    <input
+                        type="number"
+                        id="totalStudents"
+                        min="1"
+                        placeholder="e.g. 350"
+                        required
+                    >
+
+                    <small>
+                        Total students available in the target batch.
+                    </small>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="participatingStudents">
+                        Expected Participants
+                        <span>*</span>
+                    </label>
+
+                    <input
+                        type="number"
+                        id="participatingStudents"
+                        min="1"
+                        placeholder="e.g. 250"
+                        required
+                    >
+
+                    <small>
+                        Approximate number of students expected to participate.
+                    </small>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="batch">
+                        Target Batch
+                    </label>
+
+                    <select id="batch">
+
+                        <option value="">
+                            Select batch
+                        </option>
+
+                        <option value="2026">
+                            2026
+                        </option>
+
+                        <option value="2027">
+                            2027
+                        </option>
+
+                        <option value="2028">
+                            2028
+                        </option>
+
+                        <option value="2029">
+                            2029
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="branches">
+                        Target Branches
+                    </label>
+
+                    <input
+                        type="text"
+                        id="branches"
+                        placeholder="CSE, IT, ECE, ME, etc."
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SECTION 4 -->
+        <section class="form-section">
+
+            <div class="section-heading">
+
+                <span class="section-number">04</span>
+
+                <div>
+
+                    <h2>Additional Requirements</h2>
+
+                    <p>
+                        Capture any specific expectations from the institution.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label for="startDate">
+                        Preferred Start Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="startDate"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="priority">
+                        Primary Objective
+                    </label>
+
+                    <select id="priority">
+
+                        <option value="">
+                            Select objective
+                        </option>
+
+                        <option value="Placement Readiness">
+                            Placement Readiness
+                        </option>
+
+                        <option value="Interview Preparation">
+                            Interview Preparation
+                        </option>
+
+                        <option value="Aptitude & Coding">
+                            Aptitude & Coding
+                        </option>
+
+                        <option value="Communication & Soft Skills">
+                            Communication & Soft Skills
+                        </option>
+
+                        <option value="Overall Career Readiness">
+                            Overall Career Readiness
+                        </option>
+
+                        <option value="Customized">
+                            Customized Requirement
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group full-width">
+
+                    <label for="requirements">
+                        Additional Requirements / Notes
+                    </label>
+
+                    <textarea
+                        id="requirements"
+                        rows="5"
+                        placeholder="Mention any specific requirements, student challenges, preferred intervention areas, timelines, etc."
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SUMMARY -->
+        <section class="summary-section">
+
+            <div>
+
+                <span class="summary-label">
+                    SELECTED PROGRAM
+                </span>
+
+                <h3 id="summaryProgram">
+                    Not selected
+                </h3>
+
+            </div>
+
+
+            <div>
+
+                <span class="summary-label">
+                    STUDENT COUNT
+                </span>
+
+                <h3 id="summaryStudents">
+                    —
+                </h3>
+
+            </div>
+
+
+            <div>
+
+                <span class="summary-label">
+                    INSTITUTION
+                </span>
+
+                <h3 id="summaryCollege">
+                    —
+                </h3>
+
+            </div>
+
+        </section>
+
+
+        <!-- ACTIONS -->
+        <div class="form-actions">
+
+            <button
+                type="button"
+                class="secondary-button"
+                id="resetButton"
+            >
+                Reset
+            </button>
+
+
+            <button
+                type="submit"
+                class="primary-button"
+            >
+                Submit Requirement
+                <span>→</span>
+            </button>
+
+        </div>
+
+    </form>
+
+
+    <!-- SUCCESS MESSAGE -->
+    <div
+        id="successMessage"
+        class="success-message"
+    >
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+        <h2>Requirement Captured</h2>
+
+        <p>
+            The program requirement has been successfully captured.
+        </p>
+
+        <button
+            onclick="location.reload()"
+            class="primary-button"
+        >
+            Submit Another Requirement
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="js/pricing.js"></script>
+
+</body>
+</html>
