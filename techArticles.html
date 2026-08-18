@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DevOps, Cloud, Kubernetes, Azure and AWS technical knowledge hub.">
+  <title>Knowledge Hub</title>
+  <link rel="stylesheet" href="techArticles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html"></a>
+          </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="eyebrow">Resume • Tech Articles • Career Guides</p>
+        <h1>Practical knowledge for Freshers Engineers.</h1>
+        <p class="hero-text">Resume tips, Technical guides and interview-focused learning resources.</p>
+        <div class="search-wrap">
+          <input id="searchInput" type="search" placeholder="Search articles, ..." aria-label="Search articles">
+          <span>⌕</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="container content-section">
+      <div id="categories" class="filter-row">
+        <button class="filter active" data-category="All">Career & Placement Readiness</button>
+        <button class="filter" data-category="Kubernetes">Resume Services</button>
+        <button class="filter" data-category="Azure">Portfolio Building</button>
+        <button class="filter" data-category="AWS">Skill Development</button>
+        <button class="filter" data-category="Terraform">Interview Preparation</button>
+        <button class="filter" data-category="DevOps">Mock Interview Services</button>
+      </div>
+
+      <div id="postGrid" class="post-grid"></div>
+      <div id="emptyState" class="empty hidden">
+        <h2>No articles found</h2>
+        <p>Try another keyword or category.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/newArticles.js.js"></script>
+  <script src="js/articles.js"></script>
+</body>
+</html>
