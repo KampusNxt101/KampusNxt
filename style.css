@@ -368,3 +368,24 @@ footer{
         border-radius: 6px;
     }
 }
+
+.about-poster {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-poster img {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+
+    /* Optional */
+    border-radius: 12px;
+}
