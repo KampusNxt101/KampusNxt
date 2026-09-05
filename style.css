@@ -397,17 +397,14 @@ footer{
 
 .enroll-btn {
     display: inline-block;
-    margin-top: 20px;
     padding: 12px 30px;
-    background: #007bff;
+    background-color: #007bff;
     color: #fff;
     text-decoration: none;
     font-weight: 600;
     border-radius: 6px;
-    transition: all 0.3s ease;
 }
 
 .enroll-btn:hover {
-    background: #0056b3;
-    transform: translateY(-2px);
+    background-color: #0056b3;
 }
