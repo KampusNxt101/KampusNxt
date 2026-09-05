@@ -369,16 +369,18 @@ footer{
     }
 }
 
+```css
 .about-poster {
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.about-poster a {
+.about-poster > a:first-child {
     display: block;
-    width: 75%; /* Reduce poster size */
+    width: 75%;
 }
 
 .about-poster img {
@@ -395,8 +397,14 @@ footer{
     transform: scale(1.02);
 }
 
+.enroll-wrapper {
+    margin-top: 25px;
+    text-align: center;
+}
+
 .enroll-btn {
     display: inline-block;
+    width: auto !important;
     padding: 12px 30px;
     background-color: #007bff;
     color: #fff;
@@ -408,7 +416,5 @@ footer{
 .enroll-btn:hover {
     background-color: #0056b3;
 }
-.enroll-wrapper { 
-    margin-top: 25px; 
-    text-align: center; 
-}
+```
+
