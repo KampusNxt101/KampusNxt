@@ -408,3 +408,7 @@ footer{
 .enroll-btn:hover {
     background-color: #0056b3;
 }
+.enroll-wrapper { 
+    margin-top: 25px; 
+    text-align: center; 
+}
