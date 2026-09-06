@@ -1,0 +1,585 @@
+<!-- KampusNxt - Resume Readiness -->
+<section id="resume-readiness" class="resume-readiness-section">
+
+    <style>
+        .resume-readiness-section {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f8fafc;
+            color: #1f2937;
+            padding: 70px 20px;
+        }
+
+        .resume-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .resume-hero {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .resume-badge {
+            display: inline-block;
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        .resume-hero h1 {
+            font-size: 42px;
+            line-height: 1.2;
+            margin: 0 0 18px;
+            color: #111827;
+        }
+
+        .resume-hero h1 span {
+            color: #007bff;
+        }
+
+        .resume-hero p {
+            max-width: 780px;
+            margin: 0 auto;
+            font-size: 18px;
+            line-height: 1.7;
+            color: #6b7280;
+        }
+
+        .resume-intro {
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 16px;
+            margin-bottom: 45px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+        }
+
+        .resume-intro h2 {
+            margin-top: 0;
+            font-size: 28px;
+            color: #111827;
+        }
+
+        .resume-intro p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #4b5563;
+            margin-bottom: 12px;
+        }
+
+        .resume-intro strong {
+            color: #111827;
+        }
+
+        .resume-section-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .resume-section-title h2 {
+            font-size: 30px;
+            margin-bottom: 10px;
+            color: #111827;
+        }
+
+        .resume-section-title p {
+            color: #6b7280;
+            font-size: 16px;
+        }
+
+        .resume-benefits {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            margin-bottom: 55px;
+        }
+
+        .resume-card {
+            background: #ffffff;
+            padding: 28px;
+            border-radius: 14px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .resume-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .resume-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #eff6ff;
+            color: #007bff;
+            border-radius: 10px;
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 18px;
+        }
+
+        .resume-card h3 {
+            margin: 0 0 10px;
+            font-size: 19px;
+            color: #111827;
+        }
+
+        .resume-card p {
+            margin: 0;
+            font-size: 15px;
+            line-height: 1.7;
+            color: #6b7280;
+        }
+
+        .resume-process {
+            background: #111827;
+            color: #ffffff;
+            padding: 50px 35px;
+            border-radius: 18px;
+            margin-bottom: 50px;
+        }
+
+        .resume-process h2 {
+            text-align: center;
+            margin: 0 0 35px;
+            font-size: 30px;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        .process-number {
+            width: 45px;
+            height: 45px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            background: #007bff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .process-step h3 {
+            font-size: 17px;
+            margin: 0 0 8px;
+        }
+
+        .process-step p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #d1d5db;
+            margin: 0;
+        }
+
+        .resume-checklist {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            margin-bottom: 50px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+        }
+
+        .resume-checklist h2 {
+            font-size: 28px;
+            margin-top: 0;
+            color: #111827;
+        }
+
+        .resume-checklist ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0;
+        }
+
+        .resume-checklist li {
+            padding: 12px 0 12px 30px;
+            position: relative;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .resume-checklist li:last-child {
+            border-bottom: none;
+        }
+
+        .resume-checklist li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 12px;
+            color: #16a34a;
+            font-weight: bold;
+        }
+
+        .resume-cta {
+            text-align: center;
+            background: #eaf4ff;
+            padding: 45px 30px;
+            border-radius: 18px;
+        }
+
+        .resume-cta h2 {
+            font-size: 30px;
+            margin: 0 0 12px;
+            color: #111827;
+        }
+
+        .resume-cta p {
+            max-width: 700px;
+            margin: 0 auto 25px;
+            color: #4b5563;
+            line-height: 1.7;
+        }
+
+        .resume-cta a {
+            display: inline-block;
+            padding: 13px 28px;
+            background: #007bff;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 7px;
+            transition: background 0.3s ease;
+        }
+
+        .resume-cta a:hover {
+            background: #0056b3;
+        }
+
+        @media (max-width: 900px) {
+            .resume-benefits {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .resume-readiness-section {
+                padding: 45px 15px;
+            }
+
+            .resume-hero h1 {
+                font-size: 32px;
+            }
+
+            .resume-hero p {
+                font-size: 16px;
+            }
+
+            .resume-benefits {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .resume-intro,
+            .resume-checklist {
+                padding: 25px;
+            }
+        }
+    </style>
+
+    <div class="resume-container">
+
+        <!-- Hero Section -->
+        <div class="resume-hero">
+
+            <div class="resume-badge">
+                CAREER READINESS PROGRAM
+            </div>
+
+            <h1>
+                Resume <span>Readiness</span>
+            </h1>
+
+            <p>
+                Your resume is more than a document — it is your
+                <strong>first professional impression</strong>.
+                KampusNxt helps students and professionals build a
+                clear, compelling, and career-focused resume that
+                highlights their skills, experience, and potential.
+            </p>
+
+        </div>
+
+
+        <!-- Introduction -->
+        <div class="resume-intro">
+
+            <h2>Build a Resume That Gets You Noticed</h2>
+
+            <p>
+                In today's competitive job market, having the right skills
+                is only part of the journey. Your resume needs to communicate
+                those skills effectively and present your professional story
+                in a way that is <strong>clear, relevant, and impactful</strong>.
+            </p>
+
+            <p>
+                The <strong>KampusNxt Resume Readiness</strong> program focuses
+                on helping candidates create a resume that represents their
+                strengths, career goals, technical capabilities, projects,
+                achievements, and professional experience.
+            </p>
+
+            <p>
+                Whether you are a <em>fresher, student, career starter, or
+                experienced professional</em>, our approach helps you
+                present your profile with greater clarity and confidence.
+            </p>
+
+        </div>
+
+
+        <!-- Key Benefits -->
+        <div class="resume-section-title">
+
+            <h2>What Resume Readiness Covers</h2>
+
+            <p>
+                A structured approach to making your resume more professional,
+                relevant, and interview-ready.
+            </p>
+
+        </div>
+
+
+        <div class="resume-benefits">
+
+            <div class="resume-card">
+                <div class="resume-icon">01</div>
+
+                <h3>Professional Resume Structure</h3>
+
+                <p>
+                    Organize your resume with a clean and professional
+                    structure that makes important information easy for
+                    recruiters and hiring teams to find.
+                </p>
+            </div>
+
+
+            <div class="resume-card">
+                <div class="resume-icon">02</div>
+
+                <h3>Skills & Expertise</h3>
+
+                <p>
+                    Present your technical and professional skills in a way
+                    that clearly demonstrates your capabilities and relevance
+                    to your target career or role.
+                </p>
+            </div>
+
+
+            <div class="resume-card">
+                <div class="resume-icon">03</div>
+
+                <h3>Project Presentation</h3>
+
+                <p>
+                    Learn how to describe academic, personal, and professional
+                    projects by focusing on your contribution, technologies,
+                    responsibilities, and outcomes.
+                </p>
+            </div>
+
+
+            <div class="resume-card">
+                <div class="resume-icon">04</div>
+
+                <h3>Achievement-Focused Content</h3>
+
+                <p>
+                    Transform generic responsibilities into stronger
+                    achievement-oriented statements that communicate the
+                    value you have delivered.
+                </p>
+            </div>
+
+
+            <div class="resume-card">
+                <div class="resume-icon">05</div>
+
+                <h3>ATS-Friendly Approach</h3>
+
+                <p>
+                    Structure your resume using clear formatting, relevant
+                    terminology, and appropriate keywords to improve its
+                    readability for modern recruitment systems.
+                </p>
+            </div>
+
+
+            <div class="resume-card">
+                <div class="resume-icon">06</div>
+
+                <h3>Career Alignment</h3>
+
+                <p>
+                    Align your resume with your target job role so that your
+                    profile communicates the skills and experience most
+                    relevant to the opportunities you are pursuing.
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- Process -->
+        <div class="resume-process">
+
+            <h2>Our Resume Readiness Approach</h2>
+
+            <div class="process-grid">
+
+                <div class="process-step">
+
+                    <div class="process-number">1</div>
+
+                    <h3>Profile Understanding</h3>
+
+                    <p>
+                        Understand your education, experience, skills,
+                        projects, achievements, and career objectives.
+                    </p>
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <div class="process-number">2</div>
+
+                    <h3>Resume Assessment</h3>
+
+                    <p>
+                        Identify areas that need improvement in your
+                        existing resume and professional presentation.
+                    </p>
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <div class="process-number">3</div>
+
+                    <h3>Content Enhancement</h3>
+
+                    <p>
+                        Improve the way your skills, projects, experience,
+                        and achievements are communicated.
+                    </p>
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <div class="process-number">4</div>
+
+                    <h3>Final Readiness</h3>
+
+                    <p>
+                        Create a polished, professional resume that is
+                        ready to support your job search and applications.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Checklist -->
+        <div class="resume-checklist">
+
+            <h2>Is Your Resume Ready?</h2>
+
+            <p>
+                Before applying for your next opportunity, make sure your
+                resume can answer these important questions:
+            </p>
+
+            <ul>
+
+                <li>
+                    Does your resume clearly communicate your
+                    <strong>career objective and professional profile</strong>?
+                </li>
+
+                <li>
+                    Are your most relevant <strong>skills and technologies</strong>
+                    easy to identify?
+                </li>
+
+                <li>
+                    Are your projects and experience explained with
+                    <strong>clear responsibilities and outcomes</strong>?
+                </li>
+
+                <li>
+                    Does your resume highlight your
+                    <strong>achievements instead of only listing duties</strong>?
+                </li>
+
+                <li>
+                    Is the content relevant to the
+                    <strong>job roles you are targeting</strong>?
+                </li>
+
+                <li>
+                    Is the overall resume professional, readable, consistent,
+                    and <strong>ATS-friendly</strong>?
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- CTA -->
+        <div class="resume-cta">
+
+            <h2>Make Your Resume Career-Ready</h2>
+
+            <p>
+                A strong resume can help open the door to the right
+                opportunity. <strong>KampusNxt</strong> helps you present
+                your professional profile with clarity, confidence, and
+                purpose.
+            </p>
+
+            <a href="#contact">
+                Get Resume Ready
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
