@@ -1,0 +1,85 @@
+<div class="enrollment-container">
+    <div class="enrollment-form-wrapper">
+
+        <h2>Enroll Now</h2>
+        <p class="form-subtitle">
+            Fill in your details and our team will get in touch with you.
+        </p>
+
+        <form id="enrollmentForm">
+
+            <!-- Name -->
+            <div class="form-group">
+                <label for="name">Full Name <span>*</span></label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your full name"
+                    required
+                >
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email Address <span>*</span></label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email address"
+                    required
+                >
+            </div>
+
+            <!-- Mobile -->
+            <div class="form-group">
+                <label for="mobile">Mobile Number <span>*</span></label>
+                <input
+                    type="tel"
+                    id="mobile"
+                    name="mobile"
+                    placeholder="Enter your mobile number"
+                    required
+                >
+            </div>
+
+            <!-- Learning Mode -->
+            <div class="form-group">
+                <label for="learningMode">Learning Mode <span>*</span></label>
+                <select
+                    id="learningMode"
+                    name="learningMode"
+                    required
+                >
+                    <option value="">Select learning mode</option>
+                    <option value="Online">Online</option>
+                    <option value="Offline">Offline</option>
+                    <option value="Hybrid">Hybrid</option>
+                </select>
+            </div>
+
+            <!-- Additional Message -->
+            <div class="form-group">
+                <label for="message">Additional Message <small>(Optional)</small></label>
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    placeholder="Anything you would like us to know?"
+                ></textarea>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="enroll-button">
+                Submit Enrollment
+            </button>
+
+        </form>
+
+        <p class="form-note">
+            By submitting this form, you agree to be contacted regarding your enrollment.
+        </p>
+
+    </div>
+</div>
