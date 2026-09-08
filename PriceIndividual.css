@@ -1,0 +1,316 @@
+```css
+/* =========================================================
+   ENROLLMENT FORM
+   Clean & Professional Responsive Design
+   ========================================================= */
+
+/* ---------- Container ---------- */
+
+.enrollment-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 50px 20px;
+    box-sizing: border-box;
+}
+
+
+/* ---------- Form Card ---------- */
+
+.enrollment-form-wrapper {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 38px;
+    background: #ffffff;
+    border: 1px solid #e8e8e8;
+    border-radius: 14px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+}
+
+
+/* ---------- Heading ---------- */
+
+.enrollment-form-wrapper h2 {
+    margin: 0;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #1f2937;
+}
+
+
+/* ---------- Subtitle ---------- */
+
+.form-subtitle {
+    margin: 10px 0 30px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #6b7280;
+}
+
+
+/* ---------- Form Group ---------- */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+/* ---------- Labels ---------- */
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #374151;
+}
+
+.form-group label span {
+    margin-left: 2px;
+    color: #dc2626;
+}
+
+.form-group label small {
+    font-size: 12px;
+    font-weight: 400;
+    color: #9ca3af;
+}
+
+
+/* ---------- Form Controls ---------- */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    display: block;
+    width: 100%;
+    padding: 13px 14px;
+    margin: 0;
+
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+
+    background-color: #ffffff;
+    color: #1f2937;
+
+    font-family: inherit;
+    font-size: 15px;
+    line-height: 1.5;
+
+    outline: none;
+    box-sizing: border-box;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+
+/* ---------- Placeholder ---------- */
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9ca3af;
+    opacity: 1;
+}
+
+
+/* ---------- Select ---------- */
+
+.form-group select {
+    cursor: pointer;
+    appearance: auto;
+}
+
+
+/* ---------- Textarea ---------- */
+
+.form-group textarea {
+    min-height: 105px;
+    resize: vertical;
+}
+
+
+/* ---------- Focus State ---------- */
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #2563eb;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+
+/* ---------- Hover State ---------- */
+
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+    border-color: #9ca3af;
+}
+
+
+/* ---------- Submit Button ---------- */
+
+.enroll-button {
+    display: block;
+    width: 100%;
+
+    padding: 14px 20px;
+    margin-top: 8px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* ---------- Button Hover ---------- */
+
+.enroll-button:hover {
+    background: #1d4ed8;
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.20);
+}
+
+
+/* ---------- Button Active ---------- */
+
+.enroll-button:active {
+    transform: translateY(1px);
+}
+
+
+/* ---------- Button Focus ---------- */
+
+.enroll-button:focus-visible {
+    outline: 3px solid rgba(37, 99, 235, 0.25);
+    outline-offset: 2px;
+}
+
+
+/* ---------- Bottom Note ---------- */
+
+.form-note {
+    margin: 18px 0 0;
+
+    text-align: center;
+
+    font-size: 12px;
+    line-height: 1.6;
+
+    color: #9ca3af;
+}
+
+
+/* ---------- Validation ---------- */
+
+.form-group input:invalid:not(:placeholder-shown),
+.form-group select:invalid:not(:focus),
+.form-group textarea:invalid:not(:placeholder-shown) {
+    border-color: #d1d5db;
+}
+
+
+/* ---------- Disabled Button ---------- */
+
+.enroll-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.65;
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 768px) {
+
+    .enrollment-container {
+        padding: 35px 18px;
+    }
+
+    .enrollment-form-wrapper {
+        max-width: 520px;
+        padding: 32px;
+    }
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 480px) {
+
+    .enrollment-container {
+        padding: 25px 15px;
+    }
+
+    .enrollment-form-wrapper {
+        padding: 25px 20px;
+        border-radius: 12px;
+    }
+
+    .enrollment-form-wrapper h2 {
+        font-size: 26px;
+    }
+
+    .form-subtitle {
+        margin-bottom: 25px;
+        font-size: 14px;
+    }
+
+    .form-group {
+        margin-bottom: 18px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 12px 13px;
+        font-size: 14px;
+    }
+
+    .enroll-button {
+        padding: 13px 18px;
+        font-size: 15px;
+    }
+}
+
+
+/* ---------- Small Mobile ---------- */
+
+@media (max-width: 360px) {
+
+    .enrollment-form-wrapper {
+        padding: 22px 16px;
+    }
+
+    .enrollment-form-wrapper h2 {
+        font-size: 24px;
+    }
+}
+```
