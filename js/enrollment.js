@@ -160,6 +160,5 @@ form.addEventListener("submit", async function (event) {
     }
 
 });
-```
 
 });
