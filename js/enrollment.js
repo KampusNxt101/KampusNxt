@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-
-```
 // ==========================================
 // GET FORM ELEMENTS
 // ==========================================
@@ -204,6 +202,5 @@ form.addEventListener("submit", function (event) {
     }, 1500);
 
 });
-```
 
 });
