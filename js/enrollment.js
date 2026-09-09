@@ -1,11 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+```
 // ==========================================
 // GET FORM ELEMENTS
 // ==========================================
 
-const form = document.querySelector("#enrollmentform");
-const submitButton = document.querySelector(".enrollment-submit-btn");
+const form = document.querySelector("#enrollmentForm");
+const submitButton = document.querySelector(".enroll-button");
 
 // Google Apps Script Web App URL
 const APP_URL =
@@ -18,6 +19,11 @@ const APP_URL =
 
 if (!form) {
     console.error("Enrollment form not found.");
+    return;
+}
+
+if (!submitButton) {
+    console.error("Submit button not found.");
     return;
 }
 
@@ -36,11 +42,11 @@ form.addEventListener("submit", async function (event) {
     // ==========================================
 
     const formData = {
-        name: document.getElementById("enrollment-name").value.trim(),
-        email: document.getElementById("enrollment-email").value.trim(),
-        mobile: document.getElementById("enrollment-mobile").value.trim(),
-        learningMode: document.getElementById("learning-mode").value,
-        message: document.getElementById("additional-message").value.trim()
+        name: document.getElementById("name").value.trim(),
+        email: document.getElementById("email").value.trim(),
+        mobile: document.getElementById("mobile").value.trim(),
+        learningMode: document.getElementById("learningMode").value,
+        message: document.getElementById("message").value.trim()
     };
 
 
@@ -54,7 +60,6 @@ form.addEventListener("submit", async function (event) {
         !formData.mobile ||
         !formData.learningMode
     ) {
-
         alert("Please fill in all required fields.");
         return;
     }
@@ -67,7 +72,6 @@ form.addEventListener("submit", async function (event) {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!emailPattern.test(formData.email)) {
-
         alert("Please enter a valid email address.");
         return;
     }
@@ -80,7 +84,6 @@ form.addEventListener("submit", async function (event) {
     const mobilePattern = /^[0-9]{10}$/;
 
     if (!mobilePattern.test(formData.mobile)) {
-
         alert("Please enter a valid 10-digit mobile number.");
         return;
     }
@@ -100,7 +103,6 @@ form.addEventListener("submit", async function (event) {
 
     const data = new URLSearchParams();
 
-    // Google Sheet / Tab name
     data.append("sheet", "Enrollment");
 
     data.append("name", formData.name);
@@ -117,11 +119,12 @@ form.addEventListener("submit", async function (event) {
     try {
 
         await fetch(APP_URL, {
-
             method: "POST",
             mode: "no-cors",
-            body: data
-
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: data.toString()
         });
 
 
@@ -160,5 +163,6 @@ form.addEventListener("submit", async function (event) {
     }
 
 });
+```
 
 });
