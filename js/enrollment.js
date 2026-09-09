@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-```
 // ==========================================
 // GET FORM ELEMENTS
 // ==========================================
@@ -120,7 +119,6 @@ form.addEventListener("submit", async function (event) {
 
         await fetch(APP_URL, {
             method: "POST",
-            mode: "no-cors",
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded"
             },
