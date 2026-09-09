@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+```
 // ==========================================
 // GET FORM ELEMENTS
 // ==========================================
@@ -28,10 +29,29 @@ if (!submitButton) {
 
 
 // ==========================================
+// CREATE HIDDEN IFRAME
+// ==========================================
+
+let iframe = document.getElementById("googleSheetFrame");
+
+if (!iframe) {
+
+    iframe = document.createElement("iframe");
+
+    iframe.id = "googleSheetFrame";
+    iframe.name = "googleSheetFrame";
+
+    iframe.style.display = "none";
+
+    document.body.appendChild(iframe);
+}
+
+
+// ==========================================
 // FORM SUBMISSION
 // ==========================================
 
-form.addEventListener("submit", async function (event) {
+form.addEventListener("submit", function (event) {
 
     event.preventDefault();
 
@@ -40,26 +60,30 @@ form.addEventListener("submit", async function (event) {
     // COLLECT FORM VALUES
     // ==========================================
 
-    const formData = {
-        name: document.getElementById("name").value.trim(),
-        email: document.getElementById("email").value.trim(),
-        mobile: document.getElementById("mobile").value.trim(),
-        learningMode: document.getElementById("learningMode").value,
-        message: document.getElementById("message").value.trim()
-    };
+    const name =
+        document.getElementById("name").value.trim();
+
+    const email =
+        document.getElementById("email").value.trim();
+
+    const mobile =
+        document.getElementById("mobile").value.trim();
+
+    const learningMode =
+        document.getElementById("learningMode").value;
+
+    const message =
+        document.getElementById("message").value.trim();
 
 
     // ==========================================
     // REQUIRED FIELD VALIDATION
     // ==========================================
 
-    if (
-        !formData.name ||
-        !formData.email ||
-        !formData.mobile ||
-        !formData.learningMode
-    ) {
+    if (!name || !email || !mobile || !learningMode) {
+
         alert("Please fill in all required fields.");
+
         return;
     }
 
@@ -68,10 +92,13 @@ form.addEventListener("submit", async function (event) {
     // EMAIL VALIDATION
     // ==========================================
 
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailPattern =
+        /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (!emailPattern.test(formData.email)) {
+    if (!emailPattern.test(email)) {
+
         alert("Please enter a valid email address.");
+
         return;
     }
 
@@ -80,10 +107,13 @@ form.addEventListener("submit", async function (event) {
     // MOBILE VALIDATION
     // ==========================================
 
-    const mobilePattern = /^[0-9]{10}$/;
+    const mobilePattern =
+        /^[0-9]{10}$/;
 
-    if (!mobilePattern.test(formData.mobile)) {
+    if (!mobilePattern.test(mobile)) {
+
         alert("Please enter a valid 10-digit mobile number.");
+
         return;
     }
 
@@ -93,72 +123,87 @@ form.addEventListener("submit", async function (event) {
     // ==========================================
 
     submitButton.disabled = true;
+
     submitButton.innerText = "Submitting...";
 
 
     // ==========================================
-    // CREATE FORM DATA
+    // CREATE TEMPORARY FORM
     // ==========================================
 
-    const data = new URLSearchParams();
+    const submitForm =
+        document.createElement("form");
 
-    data.append("sheet", "Enrollment");
+    submitForm.method = "POST";
 
-    data.append("name", formData.name);
-    data.append("email", formData.email);
-    data.append("mobile", formData.mobile);
-    data.append("learning_mode", formData.learningMode);
-    data.append("message", formData.message);
+    submitForm.action = APP_URL;
+
+    submitForm.target = "googleSheetFrame";
+
+    submitForm.style.display = "none";
 
 
     // ==========================================
-    // SEND TO GOOGLE APPS SCRIPT
+    // ADD DATA
     // ==========================================
 
-    try {
+    const fields = {
+        sheet: "Enrollment",
+        name: name,
+        email: email,
+        mobile: mobile,
+        learning_mode: learningMode,
+        message: message
+    };
 
-              await fetch(APP_URL, {
 
-                method: "POST",
-                mode: "no-cors",
-                body: data
-        });
+    Object.keys(fields).forEach(function (key) {
+
+        const input =
+            document.createElement("input");
+
+        input.type = "hidden";
+
+        input.name = key;
+
+        input.value = fields[key];
+
+        submitForm.appendChild(input);
+    });
 
 
-        // ==========================================
-        // SUCCESS MESSAGE
-        // ==========================================
+    // ==========================================
+    // SUBMIT TO GOOGLE APPS SCRIPT
+    // ==========================================
+
+    document.body.appendChild(submitForm);
+
+    submitForm.submit();
+
+
+    // ==========================================
+    // SHOW SUCCESS MESSAGE
+    // ==========================================
+
+    setTimeout(function () {
 
         alert(
             "Thank you for your enrollment!\n\n" +
             "We have received your details and our team will contact you shortly."
         );
 
-
-        // Clear form
         form.reset();
 
-
-    } catch (error) {
-
-        console.error("Enrollment Submission Error:", error);
-
-        alert(
-            "Something went wrong while submitting your enrollment. " +
-            "Please try again later."
-        );
-
-    } finally {
-
-        // ==========================================
-        // ENABLE BUTTON
-        // ==========================================
-
         submitButton.disabled = false;
-        submitButton.innerText = "Submit Enrollment";
 
-    }
+        submitButton.innerText =
+            "Submit Enrollment";
+
+        submitForm.remove();
+
+    }, 1500);
 
 });
+```
 
 });
