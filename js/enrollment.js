@@ -1,1 +1,164 @@
+document.addEventListener("DOMContentLoaded", function () {
 
+// ==========================================
+// GET FORM ELEMENTS
+// ==========================================
+
+const form = document.querySelector("#enrollmentform");
+const submitButton = document.querySelector(".enrollment-submit-btn");
+
+// Google Apps Script Web App URL
+const APP_URL =
+    "https://script.google.com/macros/s/AKfycbz6LVV3lQcExgm1U2Y9Iel15ykID9cOk3cOoOoTQeWeXqMACcIZBHiltoD4nt21b-Vv/exec";
+
+
+// ==========================================
+// CHECK FORM
+// ==========================================
+
+if (!form) {
+    console.error("Enrollment form not found.");
+    return;
+}
+
+
+// ==========================================
+// FORM SUBMISSION
+// ==========================================
+
+form.addEventListener("submit", async function (event) {
+
+    event.preventDefault();
+
+
+    // ==========================================
+    // COLLECT FORM VALUES
+    // ==========================================
+
+    const formData = {
+        name: document.getElementById("enrollment-name").value.trim(),
+        email: document.getElementById("enrollment-email").value.trim(),
+        mobile: document.getElementById("enrollment-mobile").value.trim(),
+        learningMode: document.getElementById("learning-mode").value,
+        message: document.getElementById("additional-message").value.trim()
+    };
+
+
+    // ==========================================
+    // REQUIRED FIELD VALIDATION
+    // ==========================================
+
+    if (
+        !formData.name ||
+        !formData.email ||
+        !formData.mobile ||
+        !formData.learningMode
+    ) {
+
+        alert("Please fill in all required fields.");
+        return;
+    }
+
+
+    // ==========================================
+    // EMAIL VALIDATION
+    // ==========================================
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(formData.email)) {
+
+        alert("Please enter a valid email address.");
+        return;
+    }
+
+
+    // ==========================================
+    // MOBILE VALIDATION
+    // ==========================================
+
+    const mobilePattern = /^[0-9]{10}$/;
+
+    if (!mobilePattern.test(formData.mobile)) {
+
+        alert("Please enter a valid 10-digit mobile number.");
+        return;
+    }
+
+
+    // ==========================================
+    // DISABLE BUTTON
+    // ==========================================
+
+    submitButton.disabled = true;
+    submitButton.innerText = "Submitting...";
+
+
+    // ==========================================
+    // CREATE FORM DATA
+    // ==========================================
+
+    const data = new URLSearchParams();
+
+    // Google Sheet / Tab name
+    data.append("sheet", "Enrollment");
+
+    data.append("name", formData.name);
+    data.append("email", formData.email);
+    data.append("mobile", formData.mobile);
+    data.append("learning_mode", formData.learningMode);
+    data.append("message", formData.message);
+
+
+    // ==========================================
+    // SEND TO GOOGLE APPS SCRIPT
+    // ==========================================
+
+    try {
+
+        await fetch(APP_URL, {
+
+            method: "POST",
+            mode: "no-cors",
+            body: data
+
+        });
+
+
+        // ==========================================
+        // SUCCESS MESSAGE
+        // ==========================================
+
+        alert(
+            "Thank you for your enrollment!\n\n" +
+            "We have received your details and our team will contact you shortly."
+        );
+
+
+        // Clear form
+        form.reset();
+
+
+    } catch (error) {
+
+        console.error("Enrollment Submission Error:", error);
+
+        alert(
+            "Something went wrong while submitting your enrollment. " +
+            "Please try again later."
+        );
+
+    } finally {
+
+        // ==========================================
+        // ENABLE BUTTON
+        // ==========================================
+
+        submitButton.disabled = false;
+        submitButton.innerText = "Submit Enrollment";
+
+    }
+
+});
+
+});
