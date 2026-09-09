@@ -9,7 +9,7 @@ const submitButton = document.querySelector(".enroll-button");
 
 // Google Apps Script Web App URL
 const APP_URL =
-    "https://script.google.com/macros/s/AKfycbxnfVWOzjXsfHM1lbAYxUDRaA1QKqbiHzvMRm1rt0HZtKXlgWPvn-p2lk-Mr_z5l-Pj/exec";
+    "https://script.google.com/macros/s/AKfycbyoXH5954lKRqDHBoO90JmUN8dAzYwW2YZbHM2j4y4RBkBtZB58972xbmfYBdn23fJo/exec";
 
 
 // ==========================================
