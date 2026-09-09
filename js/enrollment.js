@@ -117,12 +117,11 @@ form.addEventListener("submit", async function (event) {
 
     try {
 
-        await fetch(APP_URL, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/x-www-form-urlencoded"
-            },
-            body: data.toString()
+              await fetch(APP_URL, {
+
+                method: "POST",
+                mode: "no-cors",
+                body: data
         });
 
 
