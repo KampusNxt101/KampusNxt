@@ -368,8 +368,6 @@ footer{
         border-radius: 6px;
     }
 }
-
-```css
 .about-poster {
     width: 100%;
     display: flex;
@@ -378,11 +376,17 @@ footer{
     align-items: center;
 }
 
-.about-poster > a:first-child {
+/* Clickable Poster */
+.poster-link {
+    position: relative;
     display: block;
     width: 75%;
+    border-radius: 12px;
+    cursor: pointer;
+    text-decoration: none;
 }
 
+/* Poster Image */
 .about-poster img {
     width: 100%;
     height: auto;
@@ -390,13 +394,53 @@ footer{
     object-fit: contain;
     border-radius: 12px;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    /* Friendly clickable indication */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
-.about-poster a:hover img {
+/* Hover effect */
+.poster-link:hover img {
     transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.35);
 }
 
+/* "Click to Enroll" label */
+.click-to-enroll {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+
+    background: #007bff;
+    color: #fff;
+
+    padding: 9px 16px;
+    border-radius: 20px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+    opacity: 0;
+    transform: translateY(8px);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* Show label when user hovers */
+.poster-link:hover .click-to-enroll {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Enrollment button */
 .enroll-wrapper {
     margin-top: 25px;
     text-align: center;
@@ -405,18 +449,27 @@ footer{
 .enroll-btn {
     display: inline-block;
     width: auto !important;
-    padding: 12px 30px;
+
+    padding: 13px 32px;
+
     background-color: #007bff;
     color: #fff;
+
     text-decoration: none;
     font-weight: 600;
-    border-radius: 6px;
-    margin-left: 0;
-    margin-right: auto;
+
+    border-radius: 8px;
+
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.25);
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .enroll-btn:hover {
     background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 86, 179, 0.3);
 }
-```
-
